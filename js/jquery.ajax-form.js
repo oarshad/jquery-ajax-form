@@ -51,11 +51,11 @@
                         }
                         _callMethod(o.onComplete);
                         setTimeout(function() {
-                            $("[name='" + _iframName + "']").remove();
+                            $("[name='" + _iframe.attr("id") + "']").remove();
                         }, 0);
                     });
 
-                $(_form).attr("target", $(iframe).attr("id"));
+                $(_form).attr("target", _iframe.attr("id"));
             });
         });
     };
